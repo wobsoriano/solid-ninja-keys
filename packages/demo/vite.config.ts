@@ -7,4 +7,5 @@ export default defineConfig({
     target: 'esnext',
     polyfillDynamicImport: false,
   },
+  base: process.env.NODE_ENV === 'production' ? '/solid-ninja-keys/' : './',
 });
