@@ -5,7 +5,7 @@
     "lib": "pnpm -C packages/lib",
     "demo": "pnpm -C apps/demo",
     "clean": "rm -rf node_modules && pnpm -r clean",
-    "lint": "eslint --ext=js,ts,jsx,tsx,json . -- fix"
+    "lint": "eslint --ext=js,ts,jsx,tsx,json . --fix"
   },
   "lint-staged": {
     "{packages,apps}/**/*.{js,ts,jsx,tsx}": [

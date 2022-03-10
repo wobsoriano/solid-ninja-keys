@@ -1,33 +1,33 @@
 {
-  "version": "0.1.1",
   "name": "solid-ninja-keys",
+  "version": "0.1.1",
   "description": "Add cmd+k interface to your solid site.",
+  "keywords": [],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wobsoriano/solid-ninja-keys.git"
+  },
+  "author": "Robert Anthonie Soriano",
   "type": "module",
   "files": [
     "dist"
   ],
-  "main": "dist/esm/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/types/index.d.ts",
   "exports": {
     ".": {
       "solid": "./dist/source/index.jsx",
       "default": "./dist/esm/index.js"
     }
   },
+  "main": "dist/esm/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
   "scripts": {
     "build": "rollup -c",
     "clean": "rm -rf node_modules dist",
     "release": "bumpp --commit --push --tag && pnpm publish",
     "prepublishOnly": "pnpm run build"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wobsoriano/solid-ninja-keys.git"
-  },
-  "keywords": [],
-  "author": "Robert Anthonie Soriano",
-  "license": "MIT",
   "homepage": "https://github.com/wobsoriano/solid-ninja-keys#readme",
   "dependencies": {
     "ninja-keys": "^1.1.12",

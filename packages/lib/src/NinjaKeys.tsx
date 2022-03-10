@@ -1,41 +1,41 @@
-import 'ninja-keys';
+import 'ninja-keys'
 
 interface Hotkey {
-  id: string;
-  title: string;
-  hotkey?: string;
-  handler?: Function;
-  mdIcon?: string;
-  icon?: string;
-  parent?: string;
-  keywords?: string;
-  children?: Hotkey[];
-  section?: string;
+  id: string
+  title: string
+  hotkey?: string
+  handler?: Function
+  mdIcon?: string
+  icon?: string
+  parent?: string
+  keywords?: string
+  children?: Hotkey[]
+  section?: string
 }
 
 interface Props {
-  isDark?: boolean;
-  hotkeys?: Hotkey[];
-  placeholder?: string;
-  disableHotkeys?: boolean;
-  hideBreadcrumbs?: boolean;
-  openHotkey?: string;
-  navigationUpHotkey?: string;
-  navigationDownHotkey?: string;
-  closeHotkey?: string;
-  goBackHotkey?: string;
-  selectHotkey?: string;
-  hotKeysJoinedView?: boolean;
-  noAutoLoadMdIcons?: boolean;
+  isDark?: boolean
+  hotkeys?: Hotkey[]
+  placeholder?: string
+  disableHotkeys?: boolean
+  hideBreadcrumbs?: boolean
+  openHotkey?: string
+  navigationUpHotkey?: string
+  navigationDownHotkey?: string
+  closeHotkey?: string
+  goBackHotkey?: string
+  selectHotkey?: string
+  hotKeysJoinedView?: boolean
+  noAutoLoadMdIcons?: boolean
 }
 
 declare global {
   namespace JSX {
     interface IntrinsicElements {
       'ninja-keys': Omit<Props, 'hotkeys' | 'isDark'> & {
-        data: Props['hotkeys'];
-        class: string;
-      };
+        data: Props['hotkeys']
+        class: string
+      }
     }
   }
 }
@@ -57,7 +57,7 @@ function NinjaKeys(props: Props) {
       noAutoLoadMdIcons={props.noAutoLoadMdIcons}
       class={props.isDark ? 'dark' : 'light'}
     ></ninja-keys>
-  );
+  )
 }
 
-export default NinjaKeys;
+export default NinjaKeys
