@@ -1,15 +1,32 @@
 {
   "name": "monorepo",
   "private": true,
-  "workspaces": [
-    "packages/*"
-  ],
   "scripts": {
-    "lib": "yarn workspace solid-ninja-keys",
-    "demo": "yarn workspace demo",
-    "build:lib": "yarn lib build",
-    "build:demo": "yarn demo build",
-    "clean:modules": "rm -rf node_modules && rm -rf packages/lib/node_modules && rm -rf packages/demo/node_modules",
-    "copy:readme": "cp README.md packages/lib/README.md"
+    "lib": "pnpm -C packages/lib",
+    "demo": "pnpm -C apps/demo",
+    "clean": "rm -rf node_modules && pnpm -r clean",
+    "lint": "eslint --ext=js,ts,jsx,tsx,json . -- fix"
+  },
+  "lint-staged": {
+    "{packages,apps}/**/*.{js,ts,jsx,tsx}": [
+      "eslint --fix"
+    ]
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.18.3",
+    "eslint": "^8.10.0",
+    "lint-staged": "^12.3.5",
+    "simple-git-hooks": "^2.7.0",
+    "typescript": "^4.5.3"
+  },
+  "eslintConfig": {
+    "extends": "@antfu"
+  },
+  "eslintIgnore": [
+    "dist",
+    "node_modules"
+  ],
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
   }
 }

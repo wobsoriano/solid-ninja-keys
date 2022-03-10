@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite';
-import solidPlugin from 'vite-plugin-solid';
+import { defineConfig } from 'vite'
+import solidPlugin from 'vite-plugin-solid'
 
 export default defineConfig({
   plugins: [solidPlugin()],
@@ -8,4 +8,4 @@ export default defineConfig({
     polyfillDynamicImport: false,
   },
   base: process.env.NODE_ENV === 'production' ? '/solid-ninja-keys/' : './',
-});
+})
