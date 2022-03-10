@@ -7,7 +7,7 @@ Add `cmd+k` interface to your solid site. Built on top of [ninja-keys](https://g
 Install it:
 
 ```bash
-yarn add solid-ninja-keys
+pnpm add solid-ninja-keys
 ```
 
 Use it:
@@ -91,7 +91,7 @@ import { useNinjaKeys } from 'solid-ninja-keys'
 const {
   open,
   close,
-  setParent
+  setParent,
 } = useNinjaKeys()
 ```
 
