@@ -2,7 +2,13 @@
   "name": "solid-ninja-keys",
   "version": "0.1.1",
   "description": "Add cmd+k interface to your solid site.",
-  "keywords": [],
+  "keywords": [
+    "solid",
+    "keyboard",
+    "shortcut",
+    "keypress",
+    "hotkey"
+  ],
   "license": "MIT",
   "repository": {
     "type": "git",
