@@ -1,4 +1,4 @@
-import 'ninja-keys'
+import 'ninja-keys';
 
 interface Hotkey {
   id: string
@@ -57,7 +57,7 @@ function NinjaKeys(props: Props) {
       noAutoLoadMdIcons={props.noAutoLoadMdIcons}
       class={props.isDark ? 'dark' : 'light'}
     ></ninja-keys>
-  )
+  );
 }
 
-export default NinjaKeys
+export default NinjaKeys;

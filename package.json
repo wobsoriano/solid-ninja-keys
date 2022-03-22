@@ -5,7 +5,8 @@
     "lib": "pnpm -C packages/lib",
     "demo": "pnpm -C apps/demo",
     "clean": "rm -rf node_modules && pnpm -r clean",
-    "lint": "eslint --ext=js,ts,jsx,tsx,json . --fix"
+    "lint": "eslint --ext=js,ts,jsx,tsx .",
+    "lint:fix": "eslint --ext=js,ts,jsx,tsx . --fix"
   },
   "lint-staged": {
     "{packages,apps}/**/*.{js,ts,jsx,tsx}": [
@@ -13,20 +14,22 @@
     ]
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.18.3",
-    "eslint": "^8.10.0",
+    "@antfu/eslint-config-ts": "^0.18.9",
+    "eslint": "^8.11.0",
+    "eslint-plugin-solid": "^0.4.4",
     "lint-staged": "^12.3.5",
     "simple-git-hooks": "^2.7.0",
     "solid-js": "^1.3.3",
     "typescript": "^4.5.3"
   },
   "eslintConfig": {
-    "extends": "@antfu"
+    "plugins": ["solid"],
+    "extends": ["plugin:solid/typescript", "@antfu/eslint-config-ts"],
+    "rules": {
+      "semi": [2, "always"],
+      "@typescript-eslint/semi": [2, "always"]
+    }
   },
-  "eslintIgnore": [
-    "dist",
-    "node_modules"
-  ],
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
   }
