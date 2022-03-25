@@ -75,7 +75,7 @@ All [attributes](https://github.com/ssleptsov/ninja-keys#attributes) from ninja-
 
 ## Methods
 
-You can access ninja-keys methods anywhere in your app via `useNinjaKeys` primitive.
+You can access ninja-keys methods anywhere in your app via `createNinjaKeys` primitive.
 
 | Name                | Arg                     | Description                                                 |
 |----------------------|-----------------------------|-------------------------------------------------------------|
