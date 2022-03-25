@@ -1,1 +1,1 @@
-../packages/lib/README.md
+../packages/solid-ninja-keys/README.md
