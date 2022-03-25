@@ -30,14 +30,14 @@ importers:
       vite-plugin-solid: ^2.2.5
     dependencies:
       solid-js: 1.3.11
-      solid-ninja-keys: link:../../packages/lib
+      solid-ninja-keys: link:../../packages/solid-ninja-keys
     devDependencies:
       gh-pages: 3.2.3
       typescript: 4.6.2
       vite: 2.8.6
       vite-plugin-solid: 2.2.6
 
-  packages/lib:
+  packages/solid-ninja-keys:
     specifiers:
       bumpp: ^7.1.1
       esbuild: ^0.14.27

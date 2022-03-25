@@ -2,7 +2,7 @@
   "name": "monorepo",
   "private": true,
   "scripts": {
-    "lib": "pnpm -C packages/lib",
+    "lib": "pnpm -C packages/solid-ninja-keys",
     "demo": "pnpm -C apps/demo",
     "clean": "rm -rf node_modules && pnpm -r clean",
     "lint": "eslint --ext=js,ts,jsx,tsx .",
