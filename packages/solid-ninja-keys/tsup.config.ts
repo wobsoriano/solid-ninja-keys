@@ -8,4 +8,5 @@ export default defineConfig({
   dts: true,
   esbuildPlugins: [solidPlugin()],
   bundle: true,
+  minify: true,
 });
