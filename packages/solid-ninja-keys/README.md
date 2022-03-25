@@ -75,7 +75,7 @@ All [attributes](https://github.com/ssleptsov/ninja-keys#attributes) from ninja-
 
 ## Methods
 
-You can access ninja-keys methods anywhere in your app via `useNinjaKeys` hook.
+You can access ninja-keys methods anywhere in your app via `useNinjaKeys` primitive.
 
 | Name                | Arg                     | Description                                                 |
 |----------------------|-----------------------------|-------------------------------------------------------------|
@@ -86,13 +86,13 @@ You can access ninja-keys methods anywhere in your app via `useNinjaKeys` hook.
 Example
 
 ```tsx
-import { useNinjaKeys } from 'solid-ninja-keys';
+import { createNinjaKeys } from 'solid-ninja-keys';
 
 const {
   open,
   close,
   setParent,
-} = useNinjaKeys();
+} = createNinjaKeys();
 ```
 
 ## Styling

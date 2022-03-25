@@ -6,7 +6,7 @@ interface NinjaKeyMethods {
   setParent: (parent: string) => void
 }
 
-export function useNinjaKeys() {
+export function createNinjaKeys() {
   let el: NinjaKeyMethods | undefined;
 
   onMount(() => {

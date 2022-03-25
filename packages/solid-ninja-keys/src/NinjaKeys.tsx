@@ -1,4 +1,5 @@
 import 'ninja-keys';
+import type { Component } from 'solid-js';
 
 interface Hotkey {
   id: string
@@ -40,7 +41,7 @@ declare global {
   }
 }
 
-function NinjaKeys(props: Props) {
+const NinjaKeys: Component<Props> = (props) => {
   return (
     <ninja-keys
       data={props.hotkeys}
@@ -58,6 +59,6 @@ function NinjaKeys(props: Props) {
       class={props.isDark ? 'dark' : 'light'}
     ></ninja-keys>
   );
-}
+};
 
 export default NinjaKeys;

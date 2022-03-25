@@ -1,6 +1,6 @@
 import type { Component } from 'solid-js';
 import { createSignal } from 'solid-js';
-import { NinjaKeys, useNinjaKeys } from 'solid-ninja-keys';
+import { NinjaKeys, createNinjaKeys } from 'solid-ninja-keys';
 import logo from './logo.svg';
 import styles from './App.module.css';
 
@@ -11,7 +11,7 @@ function openInNewTab(url: string) {
 
 const App: Component = () => {
   const [isDark, setIsDark] = createSignal(false);
-  const { open } = useNinjaKeys();
+  const { open } = createNinjaKeys();
   const hotkeys = [
     {
       id: 'GitHub',

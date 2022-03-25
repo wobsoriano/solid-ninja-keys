@@ -1,4 +1,4 @@
 import NinjaKeys from './NinjaKeys';
-import { useNinjaKeys } from './useNinjaKeys';
+import { createNinjaKeys } from './createNinjaKeys';
 
-export { NinjaKeys, useNinjaKeys };
+export { NinjaKeys, createNinjaKeys };
