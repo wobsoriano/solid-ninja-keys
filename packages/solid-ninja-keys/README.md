@@ -7,7 +7,7 @@ Add `cmd+k` interface to your solid site. Built on top of [ninja-keys](https://g
 Install it:
 
 ```bash
-pnpm add solid-ninja-keys
+pnpm add solid-ninja-keys # or npm or yarn
 ```
 
 Use it:
