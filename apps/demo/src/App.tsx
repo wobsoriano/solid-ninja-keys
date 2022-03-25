@@ -65,7 +65,7 @@ const App: Component = () => {
   return (
     <div class={styles.App}>
       <header class={`${styles.header} ${isDark() ? styles['dark-mode'] : ''}`}>
-        <img src={logo} class={styles.logo} alt="logo" onClick={() => open('Home')} />
+        <img src={logo} class={styles.logo} alt="logo" onClick={() => open()} />
         <p>
           Press <kbd>cmd</kbd>+<kbd>k</kbd> (macOS) or <kbd>ctrl</kbd>+<kbd>k</kbd> (Linux/Windows),
           or click the Solid logo.
