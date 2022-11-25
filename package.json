@@ -1,7 +1,7 @@
 {
   "name": "solid-ninja-keys",
   "type": "module",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Add cmd+k interface to your solid site.",
   "author": "Robert Anthonie Soriano",
   "license": "MIT",
@@ -61,7 +61,12 @@
     "typescript": "^4.7.4"
   },
   "eslintConfig": {
-    "plugins": ["solid"],
-    "extends": ["@antfu/eslint-config-ts", "plugin:solid/typescript"]
+    "plugins": [
+      "solid"
+    ],
+    "extends": [
+      "@antfu/eslint-config-ts",
+      "plugin:solid/typescript"
+    ]
   }
 }
