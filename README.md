@@ -13,11 +13,11 @@ pnpm add solid-ninja-keys # or npm or yarn
 Use it:
 
 ```tsx
-import { createSignal } from 'solid-js';
-import { NinjaKeys } from 'solid-ninja-keys';
+import { createSignal } from 'solid-js'
+import { NinjaKeys } from 'solid-ninja-keys'
 
 function App() {
-  const [isDark, setIsDark] = createSignal(false);
+  const [isDark, setIsDark] = createSignal(false)
   const hotkeys = [
     {
       id: 'Home',
@@ -25,7 +25,7 @@ function App() {
       hotkey: 'cmd+h',
       mdIcon: 'home',
       handler: () => {
-        console.log('navigation to home');
+        console.log('navigation to home')
       },
     },
     {
@@ -38,7 +38,7 @@ function App() {
           title: 'Change theme to Light',
           mdIcon: 'light_mode',
           handler: () => {
-            setIsDark(false);
+            setIsDark(false)
           },
         },
         {
@@ -47,21 +47,21 @@ function App() {
           mdIcon: 'dark_mode',
           keywords: 'lol',
           handler: () => {
-            setIsDark(true);
+            setIsDark(true)
           },
         },
       ],
     },
-  ];
+  ]
 
   return (
     <div>
       <NinjaKeys isDark={isDark()} hotkeys={hotkeys} />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 ## Props
@@ -86,13 +86,13 @@ You can access ninja-keys methods anywhere in your app via `createNinjaKeys` pri
 Example
 
 ```tsx
-import { createNinjaKeys } from 'solid-ninja-keys';
+import { createNinjaKeys } from 'solid-ninja-keys'
 
 const {
   open,
   close,
   setParent,
-} = createNinjaKeys();
+} = createNinjaKeys()
 ```
 
 ## Styling

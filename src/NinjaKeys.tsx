@@ -1,5 +1,5 @@
-import 'ninja-keys';
-import type { Component } from 'solid-js';
+import 'ninja-keys'
+import type { Component } from 'solid-js'
 
 interface Hotkey {
   id: string
@@ -30,7 +30,7 @@ interface Props {
   noAutoLoadMdIcons?: boolean
 }
 
-declare global {
+declare module 'solid-js' {
   namespace JSX {
     interface IntrinsicElements {
       'ninja-keys': Omit<Props, 'hotkeys' | 'isDark'> & {
@@ -57,8 +57,8 @@ const NinjaKeys: Component<Props> = (props) => {
       hotKeysJoinedView={props.hotKeysJoinedView}
       noAutoLoadMdIcons={props.noAutoLoadMdIcons}
       class={props.isDark ? 'dark' : 'light'}
-    ></ninja-keys>
-  );
-};
+     />
+  )
+}
 
-export default NinjaKeys;
+export default NinjaKeys

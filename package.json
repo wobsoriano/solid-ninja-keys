@@ -1,36 +1,67 @@
 {
-  "name": "monorepo",
-  "private": true,
-  "scripts": {
-    "lib": "pnpm -C packages/solid-ninja-keys",
-    "demo": "pnpm -C apps/demo",
-    "clean": "rm -rf node_modules && pnpm -r clean",
-    "lint": "eslint --ext=js,ts,jsx,tsx .",
-    "lint:fix": "eslint --ext=js,ts,jsx,tsx . --fix"
+  "name": "solid-ninja-keys",
+  "type": "module",
+  "version": "0.2.3",
+  "description": "Add cmd+k interface to your solid site.",
+  "author": "Robert Anthonie Soriano",
+  "license": "MIT",
+  "homepage": "https://github.com/wobsoriano/solid-ninja-keys#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wobsoriano/solid-ninja-keys.git"
   },
-  "lint-staged": {
-    "{packages,apps}/**/*.{js,ts,jsx,tsx}": [
-      "eslint --fix"
-    ]
+  "keywords": [
+    "solid",
+    "keyboard",
+    "shortcut",
+    "keypress",
+    "hotkey"
+  ],
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "solid": "./dist/source/index.jsx",
+      "require": "./dist/cjs/index.js",
+      "import": "./dist/esm/index.js",
+      "browser": {
+        "require": "./dist/cjs/index.js",
+        "import": "./dist/esm/index.js"
+      },
+      "node": "./dist/cjs/index.js"
+    }
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "prepublishOnly": "pnpm build",
+    "release": "bumpp --commit --push --tag && pnpm publish",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "peerDependencies": {
+    "solid-js": "^1.5.0"
+  },
+  "dependencies": {
+    "ninja-keys": "^1.2.2"
   },
   "devDependencies": {
-    "@antfu/eslint-config-ts": "^0.18.9",
-    "eslint": "^8.11.0",
-    "eslint-plugin-solid": "^0.4.4",
-    "lint-staged": "^12.3.5",
-    "simple-git-hooks": "^2.7.0",
-    "solid-js": "^1.3.3",
-    "typescript": "^4.5.3"
+    "@antfu/eslint-config-ts": "^0.31.0",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.28.0",
+    "eslint-plugin-solid": "^0.8.0",
+    "rollup": "^2.77.2",
+    "rollup-preset-solid": "^1.4.0",
+    "solid-js": "^1.6.2",
+    "tsup": "^5.12.1",
+    "typescript": "^4.7.4"
   },
   "eslintConfig": {
     "plugins": ["solid"],
-    "extends": ["plugin:solid/typescript", "@antfu/eslint-config-ts"],
-    "rules": {
-      "semi": [2, "always"],
-      "@typescript-eslint/semi": [2, "always"]
-    }
-  },
-  "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
+    "extends": ["@antfu/eslint-config-ts", "plugin:solid/typescript"]
   }
 }

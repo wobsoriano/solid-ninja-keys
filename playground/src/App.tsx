@@ -1,24 +1,24 @@
-import type { Component } from 'solid-js';
-import { createSignal } from 'solid-js';
-import { NinjaKeys, createNinjaKeys } from 'solid-ninja-keys';
-import logo from './logo.svg';
-import styles from './App.module.css';
+import type { Component } from 'solid-js'
+import { createSignal } from 'solid-js'
+import { NinjaKeys, createNinjaKeys } from 'solid-ninja-keys'
+import logo from './logo.svg'
+import styles from './App.module.css'
 
 function openInNewTab(url: string) {
-  const win = window.open(url, '_blank');
-  win?.focus();
+  const win = window.open(url, '_blank')
+  win?.focus()
 }
 
 const App: Component = () => {
-  const [isDark, setIsDark] = createSignal(false);
-  const { open } = createNinjaKeys();
+  const [isDark, setIsDark] = createSignal(false)
+  const { open } = createNinjaKeys()
   const hotkeys = [
     {
       id: 'GitHub',
       title: 'GitHub',
       hotkey: 'cmd+h',
       handler: () => {
-        openInNewTab('https://github.com/wobsoriano/solid-ninja-keys');
+        openInNewTab('https://github.com/wobsoriano/solid-ninja-keys')
       },
     },
     {
@@ -26,7 +26,7 @@ const App: Component = () => {
       title: 'Contact',
       hotkey: 'cmd+c',
       handler: () => {
-        openInNewTab('mailto:sorianorobertc@gmail.com');
+        openInNewTab('mailto:sorianorobertc@gmail.com')
       },
     },
     {
@@ -34,7 +34,7 @@ const App: Component = () => {
       title: 'Twitter',
       hotkey: 'cmd+t',
       handler: () => {
-        openInNewTab('https://twitter.com/wobsoriano');
+        openInNewTab('https://twitter.com/wobsoriano')
       },
     },
     {
@@ -47,7 +47,7 @@ const App: Component = () => {
           title: 'Change theme to Light',
           mdIcon: 'light_mode',
           handler: () => {
-            setIsDark(false);
+            setIsDark(false)
           },
         },
         {
@@ -56,12 +56,12 @@ const App: Component = () => {
           mdIcon: 'dark_mode',
           keywords: 'lol',
           handler: () => {
-            setIsDark(true);
+            setIsDark(true)
           },
         },
       ],
     },
-  ];
+  ]
   return (
     <div class={styles.App}>
       <header class={`${styles.header} ${isDark() ? styles['dark-mode'] : ''}`}>
@@ -81,7 +81,7 @@ const App: Component = () => {
       </header>
       <NinjaKeys isDark={isDark()} hotkeys={hotkeys} />
     </div>
-  );
-};
+  )
+}
 
-export default App;
+export default App
