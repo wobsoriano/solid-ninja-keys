@@ -113,4 +113,4 @@ You can also use `svg` or `img`. Please refer to the [icons docs](https://github
 
 ## License
 
-MIT License © 2022 [Robert Soriano](https://github.com/wobsoriano)
+MIT
