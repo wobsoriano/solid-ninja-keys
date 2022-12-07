@@ -1,3 +1,7 @@
+<p>
+  <img width="100%" src="https://assets.solidjs.com/banner?type=solid-ninja-keys&background=tiles&project=%20" alt="solid-ninja-keys">
+</p>
+
 # solid-ninja-keys
 
 Add `cmd+k` interface to your solid site. Built on top of [ninja-keys](https://github.com/ssleptsov/ninja-keys).
